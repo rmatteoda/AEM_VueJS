@@ -5,39 +5,17 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/spa-vue-aem-project/settings/wcm/templates/single-page-template"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="spavue/components/page/basepage">
-        <root
+        sling:resourceType="spa-vue/components/page/basepage">
+        <centerParsys
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid">
-            <header
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <localised_experience_fragment
-                    jcr:primaryType="nt:unstructured"
-                    fragmentPath="/content/experience-fragments/spavue/en/structure/header/master"
-                    sling:resourceType="spavue/components/content/localised-experience-fragment"/>
-            </header>
-            <responsivegrid
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"
-                editable="{Boolean}true">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
-            </responsivegrid>
-            <footer
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <localised_experience_fragment
-                    jcr:primaryType="nt:unstructured"
-                    fragmentPath="/content/experience-fragments/spavue/en/structure/footer/master"
-                    sling:resourceType="spavue/components/content/localised-experience-fragment"/>
-            </footer>
-        </root>
+            sling:resourceType="wcm/foundation/components/responsivegrid"
+            editable="{Boolean}true"/>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
                     jcr:primaryType="nt:unstructured"
                     title="Smaller Screen"
-                    width="{Long}768"/>
+                    width="{Long}650"/>
                 <tablet
                     jcr:primaryType="nt:unstructured"
                     title="Tablet"

@@ -8,13 +8,13 @@
         jcr:description="Footer component to be shared across multiple templates"
         jcr:primaryType="cq:PageContent"
         jcr:title="Footer"
-        sling:resourceType="spavue/components/page/basepage">
+        sling:resourceType="spa-vue/components/page/basepage">
         <centerParsys
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="spavue/components/content/structure/footer">
+                sling:resourceType="spa-vue/components/content/structure/footer">
                 <responsivegrid
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">

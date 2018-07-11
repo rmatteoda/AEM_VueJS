@@ -8,13 +8,13 @@
         jcr:description="Header component to be shared across multiple templates"
         jcr:primaryType="cq:PageContent"
         jcr:title="Header"
-        sling:resourceType="spavue/components/page/basepage">
+        sling:resourceType="spa-vue/components/page/basepage">
         <centerParsys
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="spavue/components/structure/header">
+                sling:resourceType="spa-vue/components/structure/header">
             </header>
         </centerParsys>
     </jcr:content>

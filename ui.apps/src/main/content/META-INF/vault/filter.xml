@@ -11,5 +11,4 @@
     <filter root="/etc/clientlibs/spa-vue"/>
 
 	<filter root="/content/experience-fragments/spavue" mode="merge" />  
-	<filter root="/content/spavue" mode="merge" />  
 </workspaceFilter>

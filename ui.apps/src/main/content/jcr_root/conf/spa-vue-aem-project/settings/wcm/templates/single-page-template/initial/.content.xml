@@ -2,15 +2,11 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:template="/conf/spavue/settings/wcm/templates/single-page-template"
+        cq:template="/conf/spa-vue-aem-project/settings/wcm/templates/single-page-template"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="spavue/components/page/basepage">
-        <root
+        sling:resourceType="spa-vue/components/page/basepage">
+        <centerParsys
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"/>
-        </root>
+            sling:resourceType="wcm/foundation/components/responsivegrid"/>
     </jcr:content>
 </jcr:root>

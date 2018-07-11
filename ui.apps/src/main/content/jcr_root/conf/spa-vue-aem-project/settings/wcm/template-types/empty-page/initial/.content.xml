@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="spavue/components/page/basepage"/>
+        sling:resourceType="spa-vue/components/page/basepage"/>
 </jcr:root>
