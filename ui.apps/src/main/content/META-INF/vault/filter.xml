@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/spa-vue"/>
+
+    <filter root="/apps/sling/servlet/errorhandler"/>
+
+
+    <filter root="/conf/spa-vue-aem-project" mode="merge"/>
+
+
+    <filter root="/etc/clientlibs/spa-vue"/>
+
+	<filter root="/content/experience-fragments/spavue" mode="merge" />  
+	<filter root="/content/spavue" mode="merge" />  
+</workspaceFilter>
