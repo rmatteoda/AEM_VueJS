@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        main: ['./src/main/content/jcr_root/apps/spa-vue/clientlibs/clientlib-site/js/script.js'] // initial script, entry point, starts out app
+        main: ['./src/main/content/jcr_root/apps/spa-vue/clientlibs/clientlib-site/js/vue-app.js'] // initial script, entry point, starts out app
     },
     output: {
         filename: '[name].js',

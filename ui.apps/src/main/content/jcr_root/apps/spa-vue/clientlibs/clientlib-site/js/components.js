@@ -1,4 +1,4 @@
-import counter from '../../../components/content/counter/clientlib/js/counter.js'
+import counter from '../../../components/content/vue/counter/clientlib/js/counter.js'
 
 const components = [];
 
