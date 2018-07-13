@@ -1,8 +1,11 @@
 
-<div class="container">
-	please edit this component 
+<div data-sly-test="${wcmmode.edit}">[ Start of ${component.title} Component ]</div>
+<div class="wrapper row1">
+  <main class="hoc container clear">
+ 	<h6 class="heading font-x1">Vue.js Counter</h6>
+    <div class="counter__content" data-component="Counter">
+      <counter number="${properties.number}" button-text="${component.name}"/>
+	</div>
+  </main>
 </div>
-
-<div class="counter__content" data-component="Counter">
-    <counter number="${properties.number}" button-text="${component.name}"/>
-</div>
+<div data-sly-test="${wcmmode.edit}">[ End of ${component.title} Component ]</div>
