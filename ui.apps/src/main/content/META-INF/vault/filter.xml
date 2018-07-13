@@ -3,7 +3,8 @@
     <filter root="/apps/spa-vue"/>
 
     <filter root="/apps/sling/servlet/errorhandler"/>
-    <filter root="/conf/spa-vue-aem-project" mode="merge"/>
+    <filter root="/conf/spa-vue" mode="merge"/>
 
-	<filter root="/content/experience-fragments/spavue" mode="merge" />  
+	<filter root="/content/dam/spavue" mode="merge" />  
+	<filter root="/content/spa-vue" mode="merge" />  
 </workspaceFilter>
