@@ -8,11 +8,9 @@
               <h3 class="panel-title">Vue.js ${component.title}</h3>
             </div>
             <div class="panel-body">
-              <div class="todo_list" data-component="TodoList">
-			    	<ol>
-					 <todoitem text="liname1" number="liid1"/>
-					</ol>
-			    </div>
+                <div class="todo_list" data-component="Todoitem">
+			    	<todoitem number="${properties.number}"/>
+				</div>
             </div>
           </div>          
     </div>

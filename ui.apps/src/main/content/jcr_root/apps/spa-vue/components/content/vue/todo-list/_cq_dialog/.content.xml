@@ -29,7 +29,7 @@
                                     sling:resourceType="granite/ui/components/foundation/form/numberfield"
                                     defaultValue="1"
                                     min="1"
-                                    fieldLabel="Number"
+                                    fieldLabel="Number of task"
                                     equired="{Boolean}true"
                                     name="./number"/>
                         </items>
