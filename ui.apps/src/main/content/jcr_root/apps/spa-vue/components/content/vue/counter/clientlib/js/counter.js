@@ -4,8 +4,8 @@ const counter = {
     component: {
         props: ['number', 'buttonText'],
         template: `<div>
-                 <button @click="increment">{{buttonText}}</button>
-                 <h3>{{counter}}</h3>
+                 <button @click="increment">{{buttonText}} </button>
+                 <h4>{{counter}}</h4>
                </div>`,
         methods: {
             increment() {

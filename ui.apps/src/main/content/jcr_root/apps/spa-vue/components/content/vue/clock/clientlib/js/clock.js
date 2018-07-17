@@ -4,7 +4,7 @@ const clock = {
     component: {
         props: ['number'],
         template: `<div class="clock-container text-left">
-    					<div v-text="dateTime"></div>
+        				<span class="label label-info" v-text="dateTime"></span>
   					</div>`,
         data() {
 		    return {

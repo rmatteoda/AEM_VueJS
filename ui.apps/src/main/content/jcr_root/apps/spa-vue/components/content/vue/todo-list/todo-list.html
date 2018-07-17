@@ -1,12 +1,21 @@
 
 <div data-sly-test="${wcmmode.edit}">[ Start of ${component.title} Component ]</div>
-<div class="row1">
- 	<h6 class="heading font-x1">Vue.js ${component.title} component</h6>
-    <div class="todo_list" data-component="TodoList">
-    	<ol>
-		  <!-- Create an instance of the todo-item component -->
-		  <todoitem text="liname1" number="liid1"/>
-		</ol>
+
+<div class="row">
+ 	<div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Vue.js ${component.title}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="todo_list" data-component="TodoList">
+			    	<ol>
+					 <todoitem text="liname1" number="liid1"/>
+					</ol>
+			    </div>
+            </div>
+          </div>          
     </div>
 </div>
+
 <div data-sly-test="${wcmmode.edit}">[ End of ${component.title} Component ]</div>
