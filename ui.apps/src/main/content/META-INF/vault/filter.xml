@@ -6,5 +6,4 @@
     <filter root="/conf/spa-vue" mode="merge"/>
 
 	<filter root="/content/dam/spavue" mode="merge" />  
-	<filter root="/content/spa-vue" mode="merge" />  
 </workspaceFilter>

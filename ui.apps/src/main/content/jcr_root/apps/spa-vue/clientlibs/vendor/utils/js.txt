@@ -1,0 +1,3 @@
+src/moment.min.js
+src/moment-timezone.min.js
+src/moment-timezone-with-data.min.js
