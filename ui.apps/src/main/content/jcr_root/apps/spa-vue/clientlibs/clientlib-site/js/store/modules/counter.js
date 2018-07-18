@@ -1,4 +1,3 @@
-//import queryString from 'query-string';
 
 const state = {
   count: 0
