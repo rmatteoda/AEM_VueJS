@@ -2,22 +2,27 @@
 const counter = {
     name: 'counter',
     component: {
-        props: ['number', 'buttonText'],
+        props: ['step'],
         template: `<div>
-                 <button @click="increment">{{buttonText}} </button>
-                 <h4>{{counter}}</h4>
+                 <h4>{{ count }}</h4>
+				 <p>
+				    <button class="btn btn-sm btn-primary" @click="increment">+</button>
+				    <button class="btn btn-sm btn-primary" @click="decrement">-</button>
+				 </p>
                </div>`,
-        methods: {
-            increment() {
-                this.counter++;
-            }
-        },
-        data() {
-            return {
-                counter: Number.parseInt(this.number)
-            }
-        }
-
+        computed: {
+		    count() {
+			    return this.$store.state.counter.count
+		    }
+		  },
+		methods: {
+		    increment () {
+		      this.$store.commit('increment')
+		    },
+		    decrement () {
+		      this.$store.commit('decrement')
+		    }
+		}
     }
 }
 

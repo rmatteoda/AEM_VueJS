@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import components from './components.js'
+import store from './store'
 
 function startApp() {
 
@@ -10,7 +11,10 @@ function startApp() {
 
         el.dataset.initialized = 'true';
 
-        new Vue({el: el});
+        new Vue({
+        	el: el,
+        	store
+        });
     });
 }
 

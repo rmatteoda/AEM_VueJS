@@ -29,9 +29,9 @@
                                     sling:resourceType="granite/ui/components/foundation/form/numberfield"
                                     defaultValue="1"
                                     min="1"
-                                    fieldLabel="Number"
+                                    fieldLabel="Conunter Step"
                                     equired="{Boolean}true"
-                                    name="./number"/>
+                                    name="./step"/>
                         </items>
                     </column>
                 </items>

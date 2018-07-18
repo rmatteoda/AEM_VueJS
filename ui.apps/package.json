@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "bootstrap-vue": "^2.0.0-rc.2",
+    "moment": "^2.21.0",
+    "query-string": "^6.0.0",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
