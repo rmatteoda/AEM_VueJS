@@ -17,6 +17,8 @@ const actions = {
       ASSETS_PATH: assetsPath,
     };
     const url = `http://localhost:4502/bin/assetsStoreList?${queryString.stringify(params)}`;
+    console.log('CALL get assets : ' + url);
+        
     fetch(url, { method: 'GET' }).then(
       response => response.json(),
     ).then((json) => {
@@ -26,7 +28,7 @@ const actions = {
       } else {
       	console.log('SUCESS on get assets from AEM instance');
         
-        commit('getAssets', json.ASSETS);
+        //commit('getAssets', json.ASSETS);
       }
     });
   },
