@@ -3,7 +3,7 @@ const assetslist = {
     name: 'assetslist',
     el: '#example-1',
     component: {
-        props: ['assetsPath'],
+        props: ['assets-path'],
         template: `<ul id="example-1">
 					  <li v-for="asset in assets">
 					    {{ asset.assetName }}
@@ -11,10 +11,13 @@ const assetslist = {
 					</ul>`,
         computed: {
 		    assets() {
-		    	this.$store.dispatch('getAssets','/content/dam');
-			    return this.$store.state.dam.assets
+		    	return this.$store.state.dam.assets
 		    }
 		  },
+		created(){
+    		//initialize store data structure by submitting action.
+    		this.$store.dispatch('getAssets','/content/dam/spavue');
+ 		}, 
 		methods: {
 		    getTodoItems() {
 		      const todoItemsRange = new Array(5);

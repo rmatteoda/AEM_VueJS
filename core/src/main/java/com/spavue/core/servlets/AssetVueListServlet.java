@@ -58,12 +58,13 @@ public class AssetVueListServlet extends SlingSafeMethodsServlet {
 
         try {
         	String assetsPath = "/content/dam/spavue";
-        	//request.getRequestParameter("ASSETS_PATH").getString();
-			final PrintWriter out = response.getWriter();
+        	String assetsPathParam = request.getRequestParameter("ASSETS_PATH").getString();
+        	logger.info("VUEJS asset path param " + assetsPathParam);
+
+        	final PrintWriter out = response.getWriter();
         	final ResourceResolver resolver = request.getResourceResolver();
 	        JSONArray assetDetailsList =   createJsonAssetsList(assetsPath,resolver);  
 
-            /* Write the JSON to the PrintWriter */
             out.print(assetDetailsList.toString());
 			out.flush();
             response.setStatus(SlingHttpServletResponse.SC_OK);
@@ -79,8 +80,7 @@ public class AssetVueListServlet extends SlingSafeMethodsServlet {
 		JSONArray jsonResponse = new JSONArray();
 		logger.info("VUEJS seet crete list");
         if(resource != null){
-			logger.info("VUEJS staart resource iteration " + resource.getPath());
-        	Iterator<Resource> assetsChilds = resource.listChildren();
+			Iterator<Resource> assetsChilds = resource.listChildren();
 
 			while(assetsChilds.hasNext()){
 				Resource childAsset = assetsChilds.next();

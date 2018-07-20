@@ -2,11 +2,10 @@ import queryString from 'query-string';
 
 const state = {
   assets: [],
-  //assetsPath: '/content/dam',
 };
 
 const mutations = {
-  getAssets(state, assets) {
+  setAssets(state, assets) {
     state.assets = assets;
   },
 };
@@ -16,21 +15,21 @@ const actions = {
   	const params = {
       ASSETS_PATH: assetsPath,
     };
-    const url = `http://localhost:4502/bin/assetsStoreList?${queryString.stringify(params)}`;
-    console.log('CALL get assets : ' + url);
-        
-    fetch(url, { method: 'GET' }).then(
-      response => response.json(),
-    ).then((json) => {
-      if (json.error) {
-      	console.log('ERROR on get assets from AEM instance');
-        //commit('getAssets', json.error);
-      } else {
-      	console.log('SUCESS on get assets from AEM instance');
-        
-        //commit('getAssets', json.ASSETS);
-      }
-    });
+    
+    const urlService = `/bin/assetsStoreList?${queryString.stringify(params)}`;
+    
+    $.ajax ({
+	    url: '/bin/assetsStoreList',
+	    dataType: "json",
+	    contentType: "application/json",
+	    success: function (jsonData) {
+	        console.log("Vue.js DAM: get assets from AEM sucess");
+	        commit('setAssets', jsonData);
+	    },
+	    error: function() {
+	        console.log('ERROR on get assets from AEM instance ');
+	    }
+	});
   },
 };
 
