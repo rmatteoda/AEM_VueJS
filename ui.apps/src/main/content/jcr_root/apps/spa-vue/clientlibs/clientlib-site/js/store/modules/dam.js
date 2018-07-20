@@ -19,7 +19,7 @@ const actions = {
     const urlService = `/bin/assetsStoreList?${queryString.stringify(params)}`;
     
     $.ajax ({
-	    url: '/bin/assetsStoreList',
+	    url: urlService,
 	    dataType: "json",
 	    contentType: "application/json",
 	    success: function (jsonData) {

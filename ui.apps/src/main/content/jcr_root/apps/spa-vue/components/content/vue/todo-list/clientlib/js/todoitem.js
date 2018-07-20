@@ -6,23 +6,12 @@ const todoitem = {
         props: ['number'],
         template: `<ul id="example-1">
 					  <li v-for="item in items">
-					    {{ item }}
+					    Edit properties of asset: <b>{{ item.assetName }}</b>
 					  </li>
 					</ul>`,
-        data() {
-	      return {
-	        items: this.getTodoItems(),
-	      };
-		},
-	    methods: {
-		    getTodoItems() {
-		      const todoItemsRange = new Array(this.number);
-		      var taskId = 0;
-		      for (let i = 0; i < this.number; i += 1) {
-				taskId = i + 1;
-		        todoItemsRange[i] = 'Task ' + taskId;
-		      }
-		      return todoItemsRange;
+		computed: {
+		    items() {
+		    	return this.$store.state.dam.assets;
 		    }
 		}
 	}  

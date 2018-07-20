@@ -5,8 +5,10 @@ const assetslist = {
     component: {
         props: ['assets-path'],
         template: `<ul id="example-1">
-					  <li v-for="asset in assets">
+        			  <li v-for="asset in assets">
+        			  	<a :href="'http://localhost:4502' + asset.assetPath">
 					    {{ asset.assetName }}
+					    </a>
 					  </li>
 					</ul>`,
         computed: {
@@ -15,15 +17,8 @@ const assetslist = {
 		    }
 		  },
 		created(){
-    		//initialize store data structure by submitting action.
     		this.$store.dispatch('getAssets','/content/dam/spavue');
- 		}, 
-		methods: {
-		    getTodoItems() {
-		      const todoItemsRange = new Array(5);
-		      return todoItemsRange;
-		    }
-		}
+ 		}
 	}  
 }
 

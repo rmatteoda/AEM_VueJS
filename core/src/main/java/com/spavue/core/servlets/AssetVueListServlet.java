@@ -57,10 +57,8 @@ public class AssetVueListServlet extends SlingSafeMethodsServlet {
         response.setContentType("application/json");
 
         try {
-        	String assetsPath = "/content/dam/spavue";
-        	String assetsPathParam = request.getRequestParameter("ASSETS_PATH").getString();
-        	logger.info("VUEJS asset path param " + assetsPathParam);
-
+        	String assetsPath = request.getRequestParameter("ASSETS_PATH").getString();
+        	
         	final PrintWriter out = response.getWriter();
         	final ResourceResolver resolver = request.getResourceResolver();
 	        JSONArray assetDetailsList =   createJsonAssetsList(assetsPath,resolver);  
@@ -80,12 +78,14 @@ public class AssetVueListServlet extends SlingSafeMethodsServlet {
 		JSONArray jsonResponse = new JSONArray();
 		logger.info("VUEJS seet crete list");
         if(resource != null){
+			//Iterator<Asset> assetsChilds = DamUtil.getAssets(resource);
 			Iterator<Resource> assetsChilds = resource.listChildren();
 
 			while(assetsChilds.hasNext()){
 				Resource childAsset = assetsChilds.next();
 				JSONObject assetData = createJsonAsset(childAsset.getPath(),resResolver);
-				jsonResponse.put(assetData);		
+				if(assetData != null)
+					jsonResponse.put(assetData);		
 			}
 		}
 		            
@@ -96,12 +96,13 @@ public class AssetVueListServlet extends SlingSafeMethodsServlet {
 		Resource resource = resResolver.getResource(fileName);
 		JSONObject assetData = new JSONObject();
 		if (resource != null) {
-			//Asset asset = resource.adaptTo(Asset.class);
-			// fill asset data
-			//Resource metadata = resource.getChild(JcrConstants.JCR_CONTENT + "/metadata");
-			//ValueMap properties = metadata.adaptTo(ValueMap.class);
-			
 			try {
+				Asset asset = resource.adaptTo(Asset.class);
+				// fill asset data
+				Resource props = resource.getChild(JcrConstants.JCR_CONTENT);
+				//ValueMap properties = metadata.adaptTo(ValueMap.class);
+				if(props == null)
+					return null;
 				assetData.put("assetPath", resource.getPath());
 				assetData.put("assetName", resource.getName());
 			} catch (JSONException e) {
