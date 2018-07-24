@@ -3,11 +3,11 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        main: ['./src/main/content/jcr_root/apps/spa-vue/clientlibs/clientlib-site/js/vue-app.js'] // initial script, entry point, starts out app
+        main: ['./src/main/content/jcr_root/apps/spa-vue/clientlibs/clientlib-vue/js/vue-app.js'] // initial script, entry point, starts out app
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './target/classes/apps/spa-vue/clientlibs/clientlib-site/js') // destination path
+        path: path.resolve(__dirname, './target/classes/apps/spa-vue/clientlibs/clientlib-vue/js') // destination path
     },
     module: {
         rules: [
