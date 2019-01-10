@@ -6,9 +6,10 @@ import assetslist from '../../../components/content/vue/assets-list/clientlib/js
 const components = [];
 
 components.push(...[
-    counter,
-    todoitem,
-    clock,
-    assetslist]);
+  counter,
+  todoitem,
+  clock,
+  assetslist
+]);
 
 export default components;

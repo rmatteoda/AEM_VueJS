@@ -15,9 +15,9 @@ const actions = {
   	const params = {
       ASSETS_PATH: assetsPath,
     };
-    
+
     const urlService = `/bin/assetsStoreList?${queryString.stringify(params)}`;
-    
+
     $.ajax ({
 	    url: urlService,
 	    dataType: "json",
